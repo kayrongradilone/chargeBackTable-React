@@ -4,11 +4,7 @@
 }
 
 .table-head tr > th {
-    color: rgb(107, 159, 228);
+    color: rgb(64, 99, 146);
     font-size: small;
     border-bottom: none;
-}
-
-.dropdown {
-    color: #fff;
 }
