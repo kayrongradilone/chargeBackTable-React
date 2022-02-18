@@ -3,37 +3,28 @@ import { AiOutlineStock } from 'react-icons/ai'
 import { Table, DropdownButton, Dropdown } from 'react-bootstrap'
 import './ChargeBackTable.css'
 import { IconContext } from 'react-icons'
+import OptionsButton from '../../components/OptionsButton'
 
 
 
-const ChargeBackTable = () => {
+
+
+
+const ChargeBackTable = (props) => {
 
 
 
     return (
         <Fragment>
-            <IconContext.Provider value={{ color: 'red' }}>
-                <div className='table-head position-absolute top-0 end-0'>
-                    <DropdownButton size='md' className='dropdown text-light' title="">
-                        <Dropdown.Header className='text-dark fw-bold'>Linhas por página</Dropdown.Header>
-                        <Dropdown.Item href="#/action-1">Padrão</Dropdown.Item>
-                        <Dropdown.Item href="#/action-2">50 linhas</Dropdown.Item>
-                        <Dropdown.Divider />
-                        <Dropdown.Item className='text-dark fw-bold'>Colunas</Dropdown.Item>
-                        <Dropdown.Item href="#/action-4">Nº Cliente</Dropdown.Item>
-                        <Dropdown.Item href="#/action-5">Cliente</Dropdown.Item>
-                        <Dropdown.Item href="#/action-6">Qtd Chargeback</Dropdown.Item>
-                        <Dropdown.Item href="#/action-7">Valor chargeback</Dropdown.Item>
-                        <Dropdown.Item href="#/action-8">Qtd Vendas</Dropdown.Item>
-                        <Dropdown.Item href="#/action-9">Valor Total</Dropdown.Item>
-                        <Dropdown.Item href="#/action-10">% Chargeback</Dropdown.Item>
-                        <Dropdown.Item href="#/action-11">% Total Chargeback</Dropdown.Item>
-                        <Dropdown.Item href="#/action-12">Status</Dropdown.Item>
-                    </DropdownButton>
+            <IconContext.Provider value={{ color: 'rgb(64, 99, 146)' }}>
+                <div>
+                    <OptionsButton />
                 </div>
+            </IconContext.Provider>
 
-                <Table striped hover responsive size='md'>
-                    <thead className='table-head rounded'>
+            <IconContext.Provider value={{ color: 'red' }}>
+                <Table className='' striped hover responsive size='md'>
+                    <thead className='table-head rounded p-2'>
                         <tr>
                             <th >Nº CLIENTE</th>
                             <th>CLIENTE</th>
@@ -41,7 +32,7 @@ const ChargeBackTable = () => {
                             <th >VALOR CHARGEBACK</th>
                             <th className='chargeback'>QTD. VENDAS</th>
                             <th>VALOR TOTAL</th>
-                            <th className='chargeback'>% CHARGEBACK</th>
+                            <th id='thcenter' >% CHARGEBACK</th>
                             <th className='chargeback'>% TOTAL CHARGEBACK</th>
                         </tr>
                     </thead>
@@ -54,7 +45,7 @@ const ChargeBackTable = () => {
                             <td >72</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>2983</td>
@@ -64,7 +55,7 @@ const ChargeBackTable = () => {
                             <td >58</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0003</td>
@@ -74,7 +65,7 @@ const ChargeBackTable = () => {
                             <td >26</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0001</td>
@@ -84,7 +75,7 @@ const ChargeBackTable = () => {
                             <td >15</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -94,7 +85,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0003</td>
@@ -104,7 +95,7 @@ const ChargeBackTable = () => {
                             <td >5</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -114,7 +105,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0003</td>
@@ -124,7 +115,7 @@ const ChargeBackTable = () => {
                             <td >5</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -134,7 +125,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0003</td>
@@ -144,7 +135,7 @@ const ChargeBackTable = () => {
                             <td >5</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -154,7 +145,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0003</td>
@@ -164,7 +155,7 @@ const ChargeBackTable = () => {
                             <td >5</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -174,7 +165,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -184,7 +175,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -194,7 +185,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -204,7 +195,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -214,7 +205,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -224,7 +215,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -234,7 +225,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -244,7 +235,7 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
                         <tr>
                             <td>0002</td>
@@ -254,13 +245,14 @@ const ChargeBackTable = () => {
                             <td >8</td>
                             <td>R$ 32,000</td>
                             <td className='text-danger'><AiOutlineStock />0.05%</td>
-                            <td className='text-danger'><AiOutlineStock />0.05%</td>
+                            <td className='text-danger'><AiOutlineStock />0.03%</td>
                         </tr>
 
 
                     </tbody>
                 </Table>
             </IconContext.Provider>
+
         </Fragment>
     )
 }

@@ -7,4 +7,13 @@
     color: rgb(64, 99, 146);
     font-size: small;
     border-bottom: none;
+    padding: 10px;
+}
+
+.tbody > #thcenter {
+    align-items: center;
+}
+
+#thcenter {
+    margin-left: 10px;
 }
