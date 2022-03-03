@@ -2,18 +2,29 @@
     margin: 0;
     padding: 0;
 }
+.button-icon {
+    margin-right: 250px;
+    margin-top: 6px;
+}
 
 .button-options {
-    padding-right: 25px;
+    padding: 3px;
+    padding-right: 30px;
     background: #f8f9fa;
     box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    margin-top: 30px;
+    margin-right: 275px;
+    border-radius: 7px;
 }
 
-.checkbox {
+.checkbox-user,
+.checkbox-pattern,
+.checkbox-lines,
+.checkbox-email,
+.checkbox-client,
+.checkbox-profile {
     width: 25px;
 }
-
-.button-items {
-    padding: 5px;
-    margin-top: 30px;
+.fixed-line {
+    margin-left: 20px;
 }

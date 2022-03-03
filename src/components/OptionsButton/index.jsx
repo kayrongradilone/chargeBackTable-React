@@ -13,49 +13,39 @@ function OptionsButton() {
 
 
     return (
-        <div className="button-options position-absolute end-0">
-            <Button className="button-icon position-absolute end-0 bg-light border-light" onClick={(e) => setIsActive(!isActive)}><FaEllipsisV /></Button>
+        <>
+            <div className="position-absolute end-0">
+                <Button className="button-icon bg-transparent border-0 position-absolute end-0" onClick={(e) => setIsActive(!isActive)}><FaEllipsisV /></Button>
 
-            {isActive && (
-                <div className="button-items">
+                {isActive && (
+                    <div className="button-options">
 
-                    <ul className="fw-bold">Linhas por página</ul>
+                        <ul className="fw-bold">Linhas por página</ul>
 
-                    <ul> <input className="checkbox" type="checkbox" />Padrão</ul>
+                        <ul> <input className="checkbox-pattern" type="checkbox" />Padrão</ul>
 
-                    <ul><input className="checkbox" type="checkbox" />50 linhas</ul>
+                        <ul><input className="checkbox-lines" type="checkbox" />50 linhas</ul>
 
-                    <hr />
+                        <hr className="fixed-line" />
 
-                    <ul className="fw-bold">Colunas</ul>
+                        <ul className="fw-bold">Colunas</ul>
 
-                    <ul><input className="checkbox" type="checkbox" />Nº Cliente</ul>
+                        <ul><input className="checkbox-user" type="checkbox" />Usuário</ul>
 
-                    <ul><input className="checkbox" type="checkbox" />Cliente</ul>
+                        <ul><input className="checkbox-email" type="checkbox" />E-mail</ul>
 
-                    <ul><input className="checkbox" type="checkbox" />Qtd. Chargeback</ul>
+                        <ul><input className="checkbox-client" type="checkbox" />Cliente</ul>
 
-                    <ul> <input className="checkbox" type="checkbox" />Valor Chargeback</ul>
+                        <ul> <input className="checkbox-profile" type="checkbox" />Perfil de acesso</ul>
 
-                    <ul><input className="checkbox" type="checkbox" />Qtd Vendas</ul>
+                    </div>
 
-                    <ul><input className="checkbox" type="checkbox" />Valor Total</ul>
-
-                    <ul><input className="checkbox" type="checkbox" /> % Chargeback</ul>
-
-                    <ul><input className="checkbox" type="checkbox" /> % Total Chargeback</ul>
-
-                    <ul><input className="checkbox" type="checkbox" />Status</ul>
-
-
-
-
-                </div>
-            )}
-
-        </div>
+                )}
+            </div>
+        </>
 
     )
+
 
 }
 
